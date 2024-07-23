@@ -1,0 +1,68 @@
+/*
+class==>>main-div + grid-box+ header-box + flex-box-items + h1-header-box + p-header-box + item1 + item2 + item3 + item4
+ + whatsup-facebbok-div + face-whats-img + whatsup-img + facebook-img + face-whats-figure
+*/
+.main-div{
+    margin-top:5vh;
+    position:relative;
+}
+.grid-box{
+    display:grid;
+    grid-template-rows:30% 10% 60%;
+    grid-template-columns:100%;
+    justify-content:center;
+    grid-template-areas:
+    "header-box"
+    "."
+    "flex-box-items";
+}
+.header-box{
+    grid-area:header-box;
+}
+p ,
+h1{
+    text-align:center;
+}
+h1{
+    color:gray;
+}
+.h1-header-box{
+    font-weight:bold;
+    color:black;
+    font-size:30px;
+}
+.p-header-box{
+color:gray;
+}
+.flex-box-items{
+    grid-area:flex-box-items;
+    display:flex;
+    flex-direction:row;
+}
+img{
+    transition-duration:0.5s;
+    transition-property:all;
+}
+img:hover{
+    filter:grayscale(100%);
+}
+.item1,
+.item3{
+    align-self:flex-start;
+}
+.item2,
+.item4{
+    align-self:flex-end;
+}
+.whatsup-facebbok-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.face-whats-img{
+    cursor:pointer;
+    pointer-events: none;
+}
+.face-whats-figure{
+    margin:5px;
+}
